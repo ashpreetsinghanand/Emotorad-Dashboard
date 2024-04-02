@@ -1,6 +1,6 @@
 import Users from '../components/Dashboard/Users';
 import DashboardPageLayout from '../components/Dashboard/DashboardPageLayout'
-//import { withAuth } from '@/guards/withAuth';
+import withAuth from '../guards/withAuth';
 import React, { useContext } from 'react'
 
 
@@ -15,4 +15,4 @@ function users() {
   )
 }
 
-export default users;
+export default withAuth(users);

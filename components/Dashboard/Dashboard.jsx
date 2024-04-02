@@ -64,7 +64,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className='flex flex-col gap-y-2 mx-16 '>
+    <div className='flex flex-col gap-y-2 mx-16 mb-3'>
       <div className='flex gap-x-5 w-full'>
         <div className='w-1/4'>
           <div className='flex flex-col bg-slate-50 rounded-xl shadow-lg border-gray-200 border px-5 py-3 '>

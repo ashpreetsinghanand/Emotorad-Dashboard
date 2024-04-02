@@ -21,15 +21,13 @@ function Sidebar() {
         <div className="flex flex-col py-[8px] mt-[2px]">
           <SidebarMenuItem
             text="Dashboard"
-            Icon="/Icons/home_black_24dp.svg"
-            IconWhite="/Icons/home_white_24dp.svg"
+          
             href="/home"
             redirectlink={"/dashboard"}
           />
           <SidebarMenuItem
             text="Transactions"
-            Icon="/AnalyticsHeroicons.svg"
-            IconWhite='/AnalyticsHeroiconsWhite.svg'
+          
             href="/transactions"
             redirectlink={"/transactions"}
           />
@@ -37,15 +35,13 @@ function Sidebar() {
 
           <SidebarMenuItem
             text="Schedules"
-            Icon="/Wallet.svg"
-            IconWhite="/WalletWhite.svg"
+           
             redirectlink={"/schedules"}
             href="/schedules"
           />
           <SidebarMenuItem
             text="Users"
-            Icon="/EmailHeroBlack.svg"
-            IconWhite="/EmailHeroWhite.svg"
+           
             // hasProgressBar
             redirectlink={"/users"}
             href="/users"
@@ -53,8 +49,7 @@ function Sidebar() {
 
           <SidebarMenuItem
             text="Settings"
-            Icon="/RingHeroIcon.svg"
-            IconWhite="/RingHeroIconWhite.svg"
+         
             redirectlink={"/settings"}
             href="/settings"
           />

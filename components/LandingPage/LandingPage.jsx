@@ -72,6 +72,7 @@ function LandingPage() {
                 </div>
               </button>
               </div>
+              <p className='text-md text-center font-[500] mb-3'>Only google Login will work</p>
                 <div class="bg-white shadow-md rounded-xl p-6">
                   <div class="mb-4">
                     <label class="block text-gray-700 font-bold mb-2" htmlFor="email">
