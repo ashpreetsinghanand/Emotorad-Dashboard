@@ -17,7 +17,7 @@ const DashboardPageLayout = ({  children, headerText }) => {
 
         {/* sidebar and body below searchbar combined div */}
         <div
-          className={`flex min-h-[calc(100vh-66px)] 
+          className={`flex min-h-[calc(100vh)] 
            bg-gradient-to-b  from-[#FFFFFF] to-[#D5E1EE]
            `}
         >

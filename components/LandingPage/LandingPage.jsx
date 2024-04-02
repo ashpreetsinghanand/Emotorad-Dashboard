@@ -1,21 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import { useRouter } from 'next/router';
+import { jwtDecode } from 'jwt-decode';
 function LandingPage() {
-    const router = useRouter();
+  const router = useRouter();
 
-    const onSuccess = async (user) => {
-      // Handle successful login
-      console.log('Login successful:', user);
+  const onSuccess = async (user) => {
+    // Handle successful login
+    localStorage.setItem('isAuthenticated', true);
+    const decoded = jwtDecode(user.credential)
+    localStorage.setItem('email',decoded.email);
   
-      // Redirect user to dashboard
-      router.push('/dashboard');
-    };
-  
-    const onFailure = (error) => {
-      // Handle failed login
-      console.error('Login failed:', error);
-    };
+    //Here gpt
+    console.log('Login successful:', decoded.email);
+    // Redirect user to dashboard
+    router.push('/dashboard');
+  };
+
+  const onFailure = (error) => {
+    // Handle failed login
+    console.error('Login failed:', error);
+  };
+
   
   return (
     <div class="flex">
@@ -68,13 +74,13 @@ function LandingPage() {
               </div>
                 <div class="bg-white shadow-md rounded-xl p-6">
                   <div class="mb-4">
-                    <label class="block text-gray-700 font-bold mb-2" for="email">
+                    <label class="block text-gray-700 font-bold mb-2" htmlFor="email">
                       Email address
                     </label>
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email"/>
                   </div>
                   <div class="mb-6">
-                    <label class="block text-gray-700 font-bold mb-2" for="password">
+                    <label class="block text-gray-700 font-bold mb-2" htmlFor="password">
                       Password
                     </label>
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password"/>
